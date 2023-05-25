@@ -27,8 +27,6 @@ function formatDate(timestamp, dayRequest) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
-
   let cityElement = document.querySelector("#selectedCity");
   let temperatureElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
@@ -71,6 +69,8 @@ function handleSubmit(submit) {
 
 function displayFahrenheitTemperature(click) {
   click.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = fahrenheitTemperature;
@@ -78,6 +78,8 @@ function displayFahrenheitTemperature(click) {
 
 function displayCelsiusTemperature(click) {
   click.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = celsiusTemperature;
 }
