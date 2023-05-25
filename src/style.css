@@ -70,6 +70,8 @@
 
 .current-temperature-icon {
   font-size: 40px;
+  position: relative;
+  top: -15px;
 }
 .units {
   font-size: 16px;
@@ -80,6 +82,6 @@
 ul {
   list-style-type: none;
   justify-content: center;
-  padding-left: 90px;
+  padding-left: 20px;
   padding-top: 30px;
 }

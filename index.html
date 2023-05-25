@@ -13,7 +13,7 @@
     <div class="data">
 
         <div class="search-box">
-            <form class="search-form">
+            <form id="form" class="search-form">
                 <div class="row">
 
                     <div class="col-2 search-form-col">
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="col-10 search-form-col">
-                        <input class="form-input" placeholder="Type the name of city ..."/>
+                        <input id="input" class="form-input" placeholder="Type the name of city ..."/>
                     </div>
 
                 </div>
@@ -29,33 +29,34 @@
         </div>
 
         <div class="local-data">
-            <div class="selected-city">Tehran</div>
+            <div id="selectedCity" class="selected-city">Tehran</div>
             <div class="date-time">
                 <span>Last update</span> 
-                <span>Thursday</span> 
-                <span> 01:25 </span>
+                <span id="day">Thursday</span> 
+                <span id="time"> 01:25 </span>
             </div>
-            <div class="description" >Overcast clouds</div>
+            <div id="description" class="description" >Overcast clouds</div>
         </div>
 
         <div class="row weather">
 
-            <div class="col">
-                <span class="current-temperature-icon">🌦️</span>
-                <span class="current-temperature">33</span>
-                <a href="#" class="units">°C</a>
+            <div class="col-8">
+                <img src="" alt="" class="current-temperature-icon" id="current-temperature-icon">
+                <span id="temperature" class="current-temperature">33</span>
+                <a href="#" class="units" id="celsiusTemperature">°C</a>
                 <span class="units">|</span>
-                <a href="#" class="units">°F</a>
+                <a href="#" class="units" id="fahrenheitTemperature">°F</a>
             </div>
 
-            <div class="other-data col">
+            <div class="other-data col-4">
                 <ul>
-                    <li><span>Humidity:</span><span>9%</span></li>
-                    <li><span>Wind:</span><span>6 Km/h</span></li>
+                    <li><span>Humidity:</span><span id="humidity">9</span>%</li>
+                    <li><span>Wind:</span><span id="wind">6 </span>Km/h</li>
                 </ul>
             </div>
         </div>
     </div>
     <div> coding by Nahid : <a href="#"> open source</a></div>
+    <script src="./src/index.js"></script>
 </body>
 </html>
