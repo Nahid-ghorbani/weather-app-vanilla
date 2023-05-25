@@ -26,7 +26,7 @@
   height: 100%;
   background-color: #ececec;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -34,7 +34,7 @@
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -91,4 +91,30 @@ ul {
   text-decoration: none;
   color: #000;
   cursor: default;
+}
+
+/* forecast */
+
+.weather-forecast {
+  margin-top: 50px;
+}
+
+.forecast-col {
+  margin: 7px;
+  height: 100px;
+  background-color: #ececec;
+  border-radius: 5px;
+}
+
+.forecast-col img {
+  width: 20px;
+}
+.forecast-day {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.forecast-temperature {
+  text-align: center;
 }
