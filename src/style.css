@@ -4,12 +4,27 @@
   padding: 0;
 }
 
+body {
+  transition: background-image 0.5s;
+  overflow: hidden;
+}
+
+.day {
+  background-image: url("../assets/Day.jpg");
+  background-size: cover;
+}
+
+.night {
+  background-image: url("../assets/Night.jpg");
+  background-size: cover;
+}
+
 .data {
   display: block;
   margin: 15vh auto;
   aspect-ratio: 1 / 1;
   width: 500px;
-  background-color: #fff;
+  background-color: #ffffffac;
   padding: 20px;
   border: #d9d9d9 solid 1.5px;
 }
