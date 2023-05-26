@@ -115,15 +115,12 @@ ul {
 }
 
 .forecast-col {
-  margin: 7px;
+  margin: 2px;
   height: 100px;
   background-color: #ececec;
   border-radius: 5px;
 }
 
-.forecast-col img {
-  width: 20px;
-}
 .forecast-day {
   margin-top: 10px;
   text-align: center;
@@ -132,4 +129,11 @@ ul {
 
 .forecast-temperature {
   text-align: center;
+  font-size: 12px;
+}
+
+.forecast-icon {
+  display: block;
+  width: 36px;
+  margin: 0 auto;
 }
