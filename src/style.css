@@ -12,11 +12,21 @@ body {
 .day {
   background-image: url("../assets/Day.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .night {
   background-image: url("../assets/Night.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-body {
+  display: block;
+  margin: 0 auto;
+  height: fit-content;
+  padding: 20px;
+  width: 500px;
 }
 
 .data {
@@ -136,4 +146,23 @@ ul {
   display: block;
   width: 36px;
   margin: 0 auto;
+}
+
+.night .programmer {
+  position: relative;
+  bottom: 15vh;
+  text-align: left;
+  color: #fff;
+}
+
+.day .programmer {
+  position: relative;
+  bottom: 15vh;
+  text-align: left;
+  color: #000;
+}
+
+.programmer a {
+  text-decoration: none;
+  color: crimson;
 }

@@ -50,7 +50,6 @@ function setForecastDate(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
@@ -59,7 +58,7 @@ function displayForecast(response) {
   weatherForecast.forEach(function (dailyForecast, index) {
     let day = setForecastDate(dailyForecast.time);
 
-    if (index > 0 && index < 7) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col forecast-col">
@@ -135,31 +134,7 @@ function handleSubmit(submit) {
   search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(click) {
-  click.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-
-function displayCelsiusTemperature(click) {
-  click.preventDefault();
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-
-let celsiusTemperature = null;
 let formElement = document.querySelector("#form");
 formElement.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheitTemperature");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsiusTemperature");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-search("london");
+search("Tehran");
