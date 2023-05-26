@@ -41,6 +41,30 @@ function formatDate(timestamp, dayRequest) {
   }
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+              <div class="col forecast-col">
+                  <div class="forecast-day" id="forecast-day-1">${day}</div>
+                  <img src="" alt="" id="forecast-temperature-icon-1">
+                  <div class="forecast-temperature"> <span>3</span> | <span>18</span></div>
+              </div>
+  
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let cityElement = document.querySelector("#selectedCity");
   let temperatureElement = document.querySelector("#temperature");
@@ -108,5 +132,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsiusTemperature");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+displayForecast();
 
 search("london");
